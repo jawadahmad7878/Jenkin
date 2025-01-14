@@ -12,13 +12,14 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'npm install' // Install project dependencies
-        sh 'npm run build'  // Build the project using npm run build
+        // Assuming your build commands are in a shell script named build.sh
+        sh 'sh build.sh'  // Execute the build script
       }
     }
     stage('Test') {
       steps {
-        sh 'npm test' // Run unit tests using npm test
+        // Assuming your test commands are in a shell script named test.sh
+        sh 'sh test.sh'  // Execute the test script
       }
     }
   }
