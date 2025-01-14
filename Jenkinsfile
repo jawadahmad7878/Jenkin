@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main' // Replace with your branch
+                git branch: 'main' url: 'https://github.com/jawadahmad7878/Jenkin' // Replace with your details
+
             }
         }
         stage('Build') {
