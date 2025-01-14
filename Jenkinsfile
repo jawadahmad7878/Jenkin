@@ -1,11 +1,7 @@
 pipeline {
   agent any
 
-tools {
-    bash 'my-bash' {
-      path '/c/Program Files/Git/bin/bash.exe' 
-    }
-  }
+
   stages {
     stage('Checkout') {
       steps {
