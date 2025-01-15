@@ -11,18 +11,29 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'sh build.sh' 
+        sh 'sh build.sh'  # Execute your build script
       }
     }
     stage('Test') {
-      steps {
-        sh 'sh test.sh' 
+      steps {  # Add test commands here if needed
+        // sh 'sh test.sh'  # Uncomment if you have a test script (test.sh)
       }
     }
     stage('Build Docker Image') {
       steps {
-        docker.build(imageName: 'your_image_name:latest', Dockerfile: 'Dockerfile') 
+        script {
+          docker.build(imageName: 'your_image_name:latest', Dockerfile: 'Dockerfile')
+        }
+      }
+    }
+    stage('Run Locally (Optional)') {
+      steps {
+        script {
+          docker run -it --rm your_image_name:latest  # Replace with your image name
+        }
       }
     }
   }
 }
+          
+  
