@@ -5,7 +5,7 @@ pipeline {
     stage('Checkout') {
       steps {
         script {
-          git branch: 'main', url: 'https://github.com/jawadahmad7878/Jenkin'  # Replace with your Git repository URL
+          git branch: 'main', url: 'https://github.com/jawadahmad7878/Jenkin'  // Replace with your actual Git repository URL
         }
       }
     }
