@@ -5,13 +5,13 @@ pipeline {
     stage('Checkout') {
       steps {
         script {
-          git branch: 'main', url: 'https://github.com/jawadahmad7878/Jenkin'
+          git branch: 'main', url: 'https://github.com/jawadahmad7878/Jenkin'  # Replace with your Git repository URL
         }
       }
     }
     stage('Build') {
       steps {
-        sh 'sh build.sh'  # Execute your build script
+        sh 'sh build.sh'  // Execute your build script
       }
     }
     stage('Test') {
@@ -22,7 +22,7 @@ pipeline {
     stage('Build Docker Image') {
       steps {
         script {
-          docker.build(imageName: 'your_image_name:latest', Dockerfile: 'Dockerfile')
+          docker.build(imageName: 'your_image_name:latest', Dockerfile: 'Dockerfile')  // Replace 'your_image_name:latest' with your desired image name and tag
         }
       }
     }
@@ -35,5 +35,3 @@ pipeline {
     }
   }
 }
-          
-  
