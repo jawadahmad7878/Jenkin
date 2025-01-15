@@ -14,8 +14,8 @@ pipeline {
         sh 'sh build.sh'  // Execute your build script
       }
     }
-    stage('Test') {
-      steps {  # Add test commands here if needed
+    stage('Test') {  // Removed the comment symbol here
+      steps {  // Add test commands here if needed
         // sh 'sh test.sh'  # Uncomment if you have a test script (test.sh)
       }
     }
